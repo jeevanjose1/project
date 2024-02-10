@@ -1,0 +1,81 @@
+@import '../../assets/scss/variables';
+
+
+.heading{
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-color;
+     max-width: 309px;
+     margin-bottom: 20px;
+}
+
+.register{
+    padding: 100px 20px;
+}
+
+.reg-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    justify-content: center;
+  flex-direction: column-reverse;
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+      }
+}
+
+.line{
+    height: 400px;
+    width: .5px;
+    // padding: 1px;
+    background-color: $text-color;
+    margin: 0 50px;
+    display: none;
+    @media screen and (min-width:768px) {
+       display: block;
+      }
+    @media screen and (min-width:992px) {
+              
+        margin: 0 100px;
+
+    }
+}
+
+.form{
+    flex:1;
+   
+label{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+}
+
+.image{
+    flex:1;
+    img{
+        width: 100%;
+    }
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &>input :first-child{
+        flex: .1;
+    }
+}
+
+.input{
+   
+        margin-bottom: 10px;
+    
+}
+
+.otp{
+    font-size: 12px;
+    margin-top: 10px;
+
+}

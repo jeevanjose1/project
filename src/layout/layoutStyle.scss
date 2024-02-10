@@ -1,0 +1,135 @@
+
+@import '../assets/scss/variables';
+.header{
+    padding: 10px ;
+    min-height: 60px;
+    background-color: white;
+    -webkit-box-shadow: -1px 10px 6px -6px rgba(0,0,0,0.08);
+-moz-box-shadow: -1px 10px 6px -6px rgba(0,0,0,0.08);
+box-shadow: -1px 10px 6px -6px rgba(0,0,0,0.08);
+position: relative;
+.header-container{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    overflow: hidden;
+    @media screen and (min-width:768px) {
+        width: 120px;
+      }
+      img{
+        object-fit: contain;
+      }
+}
+.nav-container{
+    display: none;
+    @media screen and (min-width:768px) {
+        display: inline;
+      }
+    .nav{
+        .nav-list-container{
+            display: flex;
+            gap: 10px;
+      
+            .nav-list{
+                .nav-link{
+                    color: $text-color;
+                    padding: 10px;
+                    font-weight: 600;
+                    font-size: 14px;
+                      transition: all .2s ease;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.overlay{
+    
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    display: none;
+    @media screen and (min-width:768px) {
+        display: none;
+      }
+
+}
+
+.show{
+    display: block;
+}
+.nav-container-mobile{
+position: fixed;
+width: 200px;
+height: 100vh;
+right: -100%;
+top: 0;
+padding: 20px;
+display: flex ;
+flex-direction: column;
+gap: 20px;
+justify-content: center;
+background-color: white;
+z-index: 10;
+transition: all .3s ease;
+.nav-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    @media screen and (min-width:768px) {
+        display: none;
+      }
+      .nav-link{
+        color: $text-color;
+        padding: 15px 20px;
+        
+        font-weight: 600;
+        font-size: 18px;
+          transition: all .2s ease;
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.active{
+    right: 0;
+}
+.account{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    img{
+        width: 25px;
+    }
+    p{
+        display: none;
+        @media screen and (min-width:768px) {
+            display: inline-block;
+          }
+    }
+
+    .ham{
+        display: inline-block;
+        @media screen and (min-width:768px) {
+            display: none;
+          }
+    }
+}
+}
